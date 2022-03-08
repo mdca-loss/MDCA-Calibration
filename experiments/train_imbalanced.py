@@ -12,9 +12,6 @@ from solvers.loss import loss_dict
 from models import model_dict
 from datasets import dataloader_dict, dataset_nclasses_dict, dataset_classname_dict
 
-from calibration_library.ece_loss import ECELoss
-from calibration_library.cce_loss import CCELossFast
-
 from time import localtime, strftime
 
 import logging
@@ -51,13 +48,7 @@ if __name__ == "__main__":
     logging.info(f"Using dataset : {args.dataset}")
     trainloader, valloader, testloader = dataloader_dict[args.dataset](args)
 
-    
     logging.info(f"Using imbalanced CIFAR10 with imbalance: {args.imbalance}")
-
-    # set up metrics
-    ece_evaluator = ECELoss(n_classes=num_classes)    
-    fastcce_evaluator = CCELossFast(n_classes=num_classes)
-
     logging.info(f"Setting up optimizer : {args.optimizer}")
 
     if args.optimizer == "sgd":
@@ -87,7 +78,7 @@ if __name__ == "__main__":
         logging.info('Epoch: [%d | %d] LR: %f' % (epoch + 1, args.epochs, get_lr(optimizer)))
         
         train_loss, top1_train = train(trainloader, model, optimizer, criterion)
-        test_loss, top1, top3, top5, cce_score, ece_score = test(testloader, model, ece_evaluator, fastcce_evaluator, test_criterion)
+        test_loss, top1, top3, top5, cce_score, ece_score = test(testloader, model, test_criterion)
 
         scheduler.step()
 

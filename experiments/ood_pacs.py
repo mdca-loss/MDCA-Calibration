@@ -11,9 +11,6 @@ from solvers.runners import test
 from models import model_dict
 from datasets import corrupted_dataloader_dict, dataset_nclasses_dict, dataset_classname_dict, corrupted_dataset_dict
 
-from calibration_library.ece_loss import ECELoss
-from calibration_library.cce_loss import CCELossFast
-
 import logging
 
 if __name__ == "__main__":
@@ -45,8 +42,8 @@ if __name__ == "__main__":
     logging.info(f"Using dataset : {args.dataset}")
 
     # set up metrics
-    ece_evaluator = ECELoss(n_classes=num_classes)    
-    fastcce_evaluator = CCELossFast(n_classes=num_classes)
+    # ece_evaluator = ECELoss(n_classes=num_classes)    
+    # fastcce_evaluator = CCELossFast(n_classes=num_classes)
     
     criterion = torch.nn.CrossEntropyLoss()
 
@@ -67,7 +64,7 @@ if __name__ == "__main__":
 
     for c_type in corruption_list:
         _, _, testloader = corrupted_dataloader_dict[args.dataset](args, target_type=c_type)
-        test_loss, top1, top3, top5, cce_score, ece_score = test(testloader, model, ece_evaluator, fastcce_evaluator, criterion)
+        test_loss, top1, top3, top5, cce_score, ece_score = test(testloader, model, criterion)
         method_name = c_type
         logger.append([method_name, test_loss, top1, top3, top5, cce_score, ece_score])
 

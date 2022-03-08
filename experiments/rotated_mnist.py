@@ -9,9 +9,6 @@ from models import model_dict
 from datasets import corrupted_dataloader_dict, dataset_nclasses_dict, dataset_classname_dict, corrupted_dataset_dict
 from datasets.mnist import get_rotated_set
 
-from calibration_library.ece_loss import ECELoss
-from calibration_library.cce_loss import CCELossFast
-
 import logging
 
 if __name__ == "__main__":
@@ -31,10 +28,6 @@ if __name__ == "__main__":
     logging.info(f"Using model : {args.model}")
 
     model_path_list = open("tmux_runs/model_paths.txt", "r").readlines()
-
-    # set up metrics
-    ece_evaluator = ECELoss(n_classes=num_classes)    
-    fastcce_evaluator = CCELossFast(n_classes=num_classes)
     
     criterion = torch.nn.CrossEntropyLoss()
 
@@ -76,7 +69,7 @@ if __name__ == "__main__":
 
         for angle in corruption_list:
             testloader = get_rotated_set(args, angle)
-            test_loss, top1, top3, top5, cce_score, ece_score = test(testloader, model, ece_evaluator, fastcce_evaluator, criterion)
+            test_loss, top1, top3, top5, cce_score, ece_score = test(testloader, model, criterion)
             method_name = f"angle={angle}"
             logger.append([method_name, test_loss, top1, top3, top5, cce_score, ece_score])
             global_logger.append([f"{path}_angle={angle}", test_loss, top1, top3, top5, cce_score, ece_score])
