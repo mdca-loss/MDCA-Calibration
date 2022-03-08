@@ -1,6 +1,6 @@
 # Train cifar10
 # Just replace resnet20 with other model names such as resnet32, resnet56, resnet110 to train on them
-# you can also tweak hyper-parameters
+# you can also tweak hyper-parameters, look at utils/argparser.py for more parameters.
 
 # Normal training on CIFAR10
 
