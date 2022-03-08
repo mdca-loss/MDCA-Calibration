@@ -49,12 +49,12 @@ We provide trained MDCA ResNet-56 models on CIFAR10/100 and SVHN [here (Dropbox 
 
 If you find our work useful in your research, please cite the following:
 ```bibtex
-@InProceedings{mdca_aux_loss22,
-    author    = {Ramya, Jatin, Neelabh, Chetan},
+@InProceedings{,
+    author    = {},
     title     = {A Stitch in Time Saves Nine: A Train-Time Regularizing Loss for Improved Neural Network Calibration},
     booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-    month     = {June},
-    year      = {2022}
+    month     = {},
+    year      = {}
 }
 ```
 
