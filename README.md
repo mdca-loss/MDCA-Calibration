@@ -4,9 +4,10 @@ This is the official PyTorch implementation for the paper: "A Stitch in Time Sav
 ## Abstract
 Deep Neural Networks (DNNs) make overconfident mistakes which can prove to be probematic in deployment in safety critical applications. Calibration is aimed to enhance trust in DNNs. The goal of our proposed Multi-Class Difference in Confidence and Accuracy (MDCA) loss is to align the probability estimates in accordance with accuracy thereby enhancing the trust in DNN decisions. MDCA can be used in case of image classification, image segmentation, and natural language classification tasks.
 
+![Teaser](content/final_teaser.jpg)
 
-TODO
-@neelabh insert teaser figure
+Above image shows comparison of classwise reliability diagrams of Cross-Entropy vs. our proposed method.
+
 
 ## Training scripts:
 
@@ -44,9 +45,6 @@ python posthoc_calibrate.py --dataset cifar10 --model resnet56 --lr 0.001 --pati
 
 We provide trained MDCA ResNet-56 models on CIFAR10/100 and SVHN here. Feel free to use them in your experiments.
 
-TODO
-@neelabhm @jatin upload trained models
-
 ## Citation
 
 If you find our work useful in your research, please cite the following:
@@ -61,7 +59,7 @@ If you find our work useful in your research, please cite the following:
 ```
 
 ## Contact
-For questions about our paper or code, please contact [Neelabh Madan](neelabh.madan@outlook.com) or [Jatin Prakash](jatinprakash1511@gmail.com) or raise an issue on GitHub.
+For questions about our paper or code, please contact any of the authors ([@neelabh17](https://github.com/neelabh17), [@bicycleman15](https://github.com/bicycleman15), [@rhebbalaguppe](https://github.com/rhebbalaguppe) ) or raise an issue on GitHub.
 
 ## References:
 The code is adapted from the following repositories:
