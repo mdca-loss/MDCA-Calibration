@@ -41,10 +41,6 @@ python posthoc_calibrate.py --dataset cifar10 --model resnet56 --lr 0.001 --pati
 
 `experiments` folder contains our experiments on PACS, Rotated MNIST and Imbalanced CIFAR10. Please refer to the scripts provided to run them.
 
-## Pre-Trained models
-
-We provide trained MDCA ResNet-56 models on CIFAR10/100 and SVHN [here (Dropbox link)](https://www.dropbox.com/s/2c5ef2l0phx3sce/MDCA-checkpoints.zip). Feel free to use them in your experiments.
-
 ## Citation
 
 If you find our work useful in your research, please cite the following:
