@@ -43,7 +43,7 @@ python posthoc_calibrate.py --dataset cifar10 --model resnet56 --lr 0.001 --pati
 
 ## Pre-Trained models
 
-We provide trained MDCA ResNet-56 models on CIFAR10/100 and SVHN here. Feel free to use them in your experiments.
+We provide trained MDCA ResNet-56 models on CIFAR10/100 and SVHN [here (Dropbox link)](https://www.dropbox.com/s/2c5ef2l0phx3sce/MDCA-checkpoints.zip). Feel free to use them in your experiments.
 
 ## Citation
 
