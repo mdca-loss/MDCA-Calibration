@@ -1,4 +1,6 @@
-# MDCA-Calibration
+# MDCA Calibration
+
+This is the official PyTorch implementation for the paper: "A Stitch in Time Saves Nine: A Train-Time Regularizing Loss for Improved Neural Network Calibration".
 ## Abstract
 Deep Neural Networks (DNNs) make overconfident mistakes which can prove to be probematic in deployment in safety critical applications. Calibration is aimed to enhance trust in DNNs. The goal of our proposed Multi-Class Difference in Confidence and Accuracy (MDCA) loss is to align the probability estimates in accordance with accuracy thereby enhancing the trust in DNN decisions. MDCA can be used in case of image classification, image segmentation, and natural language classification tasks.
 
@@ -45,8 +47,24 @@ We provide trained MDCA ResNet-56 models on CIFAR10/100 and SVHN here. Feel free
 TODO
 @neelabhm @jatin upload trained models
 
+## Citation
+
+If you find our work useful in your research, please cite the following:
+```bibtex
+@InProceedings{mdca_aux_loss22,
+    author    = {Ramya, Jatin, Neelabh, Chetan},
+    title     = {A Stitch in Time Saves Nine: A Train-Time Regularizing Loss for Improved Neural Network Calibration},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2022}
+}
+```
+
+## Contact
+For questions about our paper or code, please contact [Neelabh Madan](neelabh.madan@outlook.com) or [Jatin Prakash](jatinprakash1511@gmail.com) or raise an issue on GitHub.
 
 ## References:
+The code is adapted from the following repositories:
 
 [1] <a href="https://github.com/bearpaw/pytorch-classification">bearpaw/pytorch-classification</a>
 [2] <a href="https://github.com/torrvision/focal_calibration">torrvision/focal_calibration</a>
