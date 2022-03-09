@@ -8,6 +8,10 @@ Deep Neural Networks (DNNs) make overconfident mistakes which can prove to be pr
 
 Above image shows comparison of classwise reliability diagrams of Cross-Entropy vs. our proposed method.
 
+## Requirements
+
+* Python 3.8
+* PyTorch 1.8
 
 ## Training scripts:
 
