@@ -13,6 +13,11 @@ Above image shows comparison of classwise reliability diagrams of Cross-Entropy 
 * Python 3.8
 * PyTorch 1.8
 
+Directly install using pip
+
+```
+ pip install -r requirements.txt
+```
 ## Training scripts:
 
 Refer to the `scripts` folder to train for every model and dataset. Overall the command to train looks like below where each argument can be changed accordingly on how to train. Also refer to `dataset/__init__.py` and `models/__init__.py` for correct arguments to train with. Argument parser can be found in `utils/argparser.py`.
