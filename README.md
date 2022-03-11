@@ -54,12 +54,12 @@ python posthoc_calibrate.py --dataset cifar10 --model resnet56 --lr 0.001 --pati
 
 If you find our work useful in your research, please cite the following:
 ```bibtex
-@InProceedings{,
-    author    = {},
+@InProceedings{StitchInTime,
+    author    = {R. Hebbalaguppe, J. Prakash, N. Madaan, C. Arora},
     title     = {A Stitch in Time Saves Nine: A Train-Time Regularizing Loss for Improved Neural Network Calibration},
     booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-    month     = {},
-    year      = {}
+    month     = {June},
+    year      = {2022}
 }
 ```
 
