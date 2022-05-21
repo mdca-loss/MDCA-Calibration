@@ -90,8 +90,8 @@ def test(testloader, model, criterion):
                     top5=top5.avg,
                     ))
 
-    eces = ECELoss().loss(outputs, targets, n_bins=15)
-    cces = SCELoss().loss(outputs, targets, n_bins=15)
+    eces = ECELoss().loss(all_outputs, all_targets, n_bins=15)
+    cces = SCELoss().loss(all_outputs, all_targets, n_bins=15)
 
     return (losses.avg, top1.avg, top3.avg, top5.avg, cces, eces)
 
