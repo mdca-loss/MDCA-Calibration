@@ -1,4 +1,4 @@
-# MDCA Calibration
+# MDCA Calibration: A Train-Time Regularizing Loss for Improved Neural Network Calibration
 
 This is the official PyTorch implementation for the paper: "A Stitch in Time Saves Nine: A Train-Time Regularizing Loss for Improved Neural Network Calibration".
 ## Abstract
