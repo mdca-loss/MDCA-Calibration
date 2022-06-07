@@ -2,11 +2,12 @@
 
 This is the official PyTorch implementation for the paper: "A Stitch in Time Saves Nine: A Train-Time Regularizing Loss for Improved Neural Network Calibration".
 ## Abstract
-Deep Neural Networks (DNNs) make overconfident mistakes which can prove to be probematic in deployment in safety critical applications. Calibration is aimed to enhance trust in DNNs. The goal of our proposed Multi-Class Difference in Confidence and Accuracy (MDCA) loss is to align the probability estimates in accordance with accuracy thereby enhancing the trust in DNN decisions. MDCA can be used in case of image classification, image segmentation, and natural language classification tasks.
+Despite the wide applicability of Deep Neural Networks(DNNs) as a part of decision pipelines in safety critical applications, modern DNNs are found to be poorly calibrated i., the DNNs make overconfident mistakes which can prove to be probematic in deployment in safety critical applications. Calibration is aimed to enhance trust in DNNs. The goal is to mitigate miscalibration by proposing a Multi-Class Difference in Confidence and Accuracy (MDCA) loss that aligns the average probability estimates in accordance with averaage accuracy thereby enhancing the trust in DNN decisions. We demonstrate use of MDCA loss in case of image classification, image segmentation, and natural language classification tasks.
 
 ![Teaser](content/teaser.png)
 
-Above image shows comparison of classwise reliability diagrams of Cross-Entropy vs. our proposed method.
+Above image shows comparison of classwise reliability diagrams of Cross-Entropy vs. our proposed method (FL+MDCA). Commonly used metrics for measuring calibration are: Expected Calibration Error (ECE) and Static Calibration Error (SCE). ECE is a weighted average of all gaps on a winning class  while SCE is a class-wise extension for every class.
+
 
 ## Requirements
 
@@ -54,12 +55,13 @@ python posthoc_calibrate.py --dataset cifar10 --model resnet56 --lr 0.001 --pati
 
 If you find our work useful in your research, please cite the following:
 ```bibtex
-@InProceedings{StitchInTime,
-    author    = {R. Hebbalaguppe, J. Prakash, N. Madan, C. Arora},
+@InProceedings{Hebbalaguppe_2022_CVPR,
+    author    = {Hebbalaguppe, Ramya and Prakash, Jatin and Madan, Neelabh and Arora, Chetan},
     title     = {A Stitch in Time Saves Nine: A Train-Time Regularizing Loss for Improved Neural Network Calibration},
     booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
     month     = {June},
-    year      = {2022}
+    year      = {2022},
+    pages     = {16081-16090}
 }
 ```
 
