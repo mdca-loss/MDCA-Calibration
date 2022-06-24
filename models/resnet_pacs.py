@@ -1,6 +1,6 @@
 import torch
 from torchvision.models.resnet import ResNet, BasicBlock
-from torchvision.models.utils import load_state_dict_from_url
+from torch.hub import load_state_dict_from_url
 
 resnet18_url = 'https://download.pytorch.org/models/resnet18-5c106cde.pth'
 
