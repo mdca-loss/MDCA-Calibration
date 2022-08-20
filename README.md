@@ -4,7 +4,7 @@ This is the official PyTorch implementation for the paper: "A Stitch in Time Sav
 ## Abstract
 Despite the wide applicability of Deep Neural Networks(DNNs) as a part of decision pipelines in safety critical applications, modern DNNs are found to be poorly calibrated i.e., the DNNs make overconfident mistakes which can prove to be probematic in deployment in safety critical applications. One of the ways to enhance trust in DNNs is via calibration. Our goal is to mitigate miscalibration by proposing a train-time regulariser termed "Multi-Class Difference in Confidence and Accuracy (MDCA)'' loss that aligns the average probability estimates in accordance with average accuracy thereby enhancing the trust in DNN decisions. We demonstrate use of MDCA loss in case of image classification, image segmentation, and natural language classification tasks. 
 
-Trivia: The title " A stitch in time saves Nine" suggests we output well-calibrated models in one go rather than in a post-hoc fashion.
+Trivia: The title " A stitch in time saves Nine" suggests we output well-calibrated models via a joint optimisation of calibration loss alongside the any classification loss thereby outputting well-calibrated models in one go rather than in a post-hoc fashion.
 
 ![Teaser](content/teaser.png)
 
